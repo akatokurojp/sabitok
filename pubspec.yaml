@@ -50,6 +50,7 @@ dependencies:
   json_annotation: ^4.0.1
   cached_network_image: ^3.2.3
   lottie: ^2.2.0
+  lit_ui_kit: ^1.4.0
   
 
 dev_dependencies:

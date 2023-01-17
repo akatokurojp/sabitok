@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sabitok/resources/auth_methods.dart';
+import 'package:sabitok/screens/forgor.dart';
 import 'package:sabitok/screens/home_screen.dart';
 import 'package:sabitok/widgets/custom_button.dart';
 import 'package:sabitok/widgets/custom_textfield.dart';
@@ -84,6 +85,27 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: CustomTextField(
                       controller: _passwordController,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        GestureDetector(
+                          onTap: (() {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => ForgorPage()));
+                          }),
+                          child: Text(
+                            'Forgot Password?',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
